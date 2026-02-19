@@ -21,7 +21,7 @@
 
 ## Overview
 
-The **octocode-research** skill is an Express.js HTTP server that wraps `octocode-mcp` tools as REST endpoints for code research. It runs on port **1987** and provides:
+The **octocode-research** skill is an Express.js HTTP server that wraps `octocode-mcp` tools as REST endpoints for code research. By default it listens on `localhost:1987` (port **1987**) and provides:
 
 | Feature | Description |
 |---------|-------------|

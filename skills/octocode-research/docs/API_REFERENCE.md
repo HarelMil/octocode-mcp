@@ -1,6 +1,6 @@
 # Octocode Research API Reference
 
-> HTTP API on `localhost:1987` - All tools via POST `/tools/call/:toolName`
+> HTTP API on `localhost:1987` by default (configurable via `OCTOCODE_RESEARCH_HOST` / `OCTOCODE_RESEARCH_PORT`) - All tools via POST `/tools/call/:toolName`
 > **v2.1.0** - Process managed by PM2
 
 ## Quick Start
@@ -14,7 +14,7 @@ npm run pm2:start                            # Start with PM2
 npm run pm2:logs                             # View logs
 npm run pm2:monit                            # Dashboard
 
-# Health & Discovery
+# Health & Discovery (defaults to localhost:1987)
 curl http://localhost:1987/health            # Health check
 curl http://localhost:1987/tools/list        # List tools
 curl http://localhost:1987/tools/info/localSearchCode  # Get schema (BEFORE calling!)
@@ -44,7 +44,7 @@ curl http://localhost:1987/tools/info/localSearchCode  # Get schema (BEFORE call
 ```bash
 curl http://localhost:1987/health
 ```
-Response:
+Response (example with default port):
 ```json
 {
   "status": "ok",
